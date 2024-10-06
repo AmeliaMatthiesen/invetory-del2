@@ -1,18 +1,17 @@
 package items;
 
-public abstract class Item {
-    private String name;
-    private int weight;
-    private double value;
+public abstract class InventoryItem {
 
-    // Konstruktor
-    public Item(String name, int weight, double value) {
+    private String name;
+    private int weight;  
+    private double value; 
+
+    public InventoryItem(String name, int weight, double value) {
         this.name = name;
         this.weight = weight;
         this.value = value;
     }
 
-    // Getters
     public String getName() {
         return name;
     }

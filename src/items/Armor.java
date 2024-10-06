@@ -1,9 +1,9 @@
 package items;
 
-import interfaces.Equippable;
+import items.interfaces.Equippable;
 
-public abstract class Armor extends Item implements Equippable {
-    
+public abstract class Armor extends InventoryItem implements Equippable {
+
     private int defense;
     private int durability;
 
@@ -30,7 +30,9 @@ public abstract class Armor extends Item implements Equippable {
     }
 
     // Metod för att utrusta och avrusta föremål
+    @Override
     public abstract void equipItem();
 
+    @Override
     public abstract void unequipItem();
 }

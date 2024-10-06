@@ -1,8 +1,8 @@
 package items;
 
-import interfaces.Equippable;
+import items.interfaces.Equippable; // Adjust the package path as necessary
 
-public abstract class Weapon extends Item implements Equippable {
+public abstract class Weapon extends InventoryItem implements Equippable {
 
     private int damage;
     private int attackSpeed;
@@ -25,12 +25,15 @@ public abstract class Weapon extends Item implements Equippable {
         this.damage = damage;
     }
 
+
     public void setAttackSpeed(int attackSpeed) {
         this.attackSpeed = attackSpeed;
     }
 
     // Metoder från equippable interface
+    @Override
     public abstract void equipItem();
 
+    @Override
     public abstract void unequipItem();
 }
