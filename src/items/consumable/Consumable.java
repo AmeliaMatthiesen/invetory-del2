@@ -1,8 +1,9 @@
 package items.consumable;
 
 import items.InventoryItem;
+import items.interfaces.Usable;
 
-public abstract class Consumable extends InventoryItem {
+public abstract class Consumable extends InventoryItem implements Usable {
 
     private int potency;
     private double duration;

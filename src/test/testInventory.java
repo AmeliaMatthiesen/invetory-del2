@@ -1,8 +1,9 @@
-package items; // Rätt paketnamn
+package test; // Rätt paketnamn
 
+import items.Inventory; // Lägg till denna import
 import items.weapons.BigSword;
 
-public class Test1 { // Ändrat namn från TestProgram till Test1
+public class testInventory { // Ändrat namn från TestProgram till Test1
 
     public static void main(String[] args) {
         // Skapa ett inventarie
