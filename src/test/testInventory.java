@@ -1,6 +1,6 @@
-package test; // Rätt paketnamn
+package test; 
 
-import items.Inventory; // Lägg till denna import
+import items.Inventory; 
 import items.weapons.BigSword;
 
 public class testInventory { 

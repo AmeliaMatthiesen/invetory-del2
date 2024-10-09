@@ -1,38 +1,47 @@
 package items;
 
-import items.interfaces.Equippable;
+public abstract class Armor {
+    private final String name;         // Name of the armor
+    private final int weight;          // Weight of the armor
+    private final double value;        // Value of the armor
+    private final int defenseValue;    // Defense value of the armor
+    private int durability;             // Durability of the armor
 
-public abstract class Armor extends InventoryItem implements Equippable {
-
-    private int defense;
-    private int durability;
-
-    public Armor(String name, int weight, double value, int defense, int durability) {
-        super(name, weight, value); // Anropa superklassens konstruktor
-        this.defense = defense;
+    public Armor(String name, int weight, double value, int defenseValue, int durability) {
+        this.name = name;
+        this.weight = weight;
+        this.value = value;
+        this.defenseValue = defenseValue; // Ensure defenseValue is set
         this.durability = durability;
     }
 
-    public int getDefense() {
-        return defense;
+    public String getName() {
+        return name;
+    }
+
+    public int getWeight() {
+        return weight; // Getter for weight
+    }
+
+    public double getValue() {
+        return value; // Getter for value
+    }
+
+    public int getDefenseValue() {
+        return defenseValue; // Getter for defenseValue
     }
 
     public int getDurability() {
         return durability;
     }
 
-    public void setDefense(int defense) {
-        this.defense = defense;
+    public void repair(int amount) {
+        this.durability += amount; // Repair method to increase durability
     }
 
-    public void setDurability(int durability) {
-        this.durability = durability;
-    }
+    public abstract int getDamageDefense(); // Abstract method to get damage defense
 
-    // Metod för att utrusta och avrusta föremål
-    @Override
-    public abstract void equipItem();
+    public abstract void equipItem(); // Abstract method to equip item
 
-    @Override
-    public abstract void unequipItem();
+    public abstract void unequipItem(); // Abstract method to unequip item
 }

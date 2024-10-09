@@ -1,11 +1,10 @@
-package test; // Justera efter behov
+package test;
 
 import items.weapons.FastBow;
-import items.weapons.BigSword; // Om den finns
-import items.weapons.ThrowingKnife; // Om den finns
+import items.weapons.BigSword;
+import items.weapons.ThrowingKnife;
 
-
-public class TestWeapons {
+public class testWeapons {
 
     public static void main(String[] args) {
 
