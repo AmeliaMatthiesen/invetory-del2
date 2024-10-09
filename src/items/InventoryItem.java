@@ -3,8 +3,8 @@ package items;
 public abstract class InventoryItem {
 
     private String name;
-    private int weight;  
-    private double value; 
+    private int weight;
+    private double value;
 
     public InventoryItem(String name, int weight, double value) {
         this.name = name;
@@ -24,7 +24,6 @@ public abstract class InventoryItem {
         return value;
     }
 
-    // Setters
     public void setName(String name) {
         this.name = name;
     }
@@ -37,7 +36,7 @@ public abstract class InventoryItem {
         this.value = value;
     }
 
-    // Metod för att visa information om föremålet
+    // Metod för att visa grundläggande information om föremålet
     public void displayInfo() {
         System.out.println("Item: " + name + ", Weight: " + weight + ", Value: " + value + " gold");
     }

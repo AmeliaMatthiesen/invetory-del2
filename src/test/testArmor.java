@@ -9,30 +9,30 @@ public class testArmor {
     }
 
     public static void testSturdyArmor() {
-        // Create an instance of SturdyArmor
+        // Skapa en instans av SturdyArmor
         SturdyArmor armor = new SturdyArmor("Sturdy Armor", 15, 100.0, 50, 200);
 
-        // Test getName()
+        // Testa getName()
         String name = armor.getName();
         System.out.println("Test getName(): " + name);
-        assert "Sturdy Armor".equals(name) : "getName() failed";
+        assert "Sturdy Armor".equals(name) : "getName() failed"; // Kontrollera att namnet stämmer
 
-        // Test getDurability()
+        // Testa getDurability()
         int durability = armor.getDurability();
         System.out.println("Test getDurability(): " + durability);
-        assert durability == 200 : "getDurability() failed";
+        assert durability == 200 : "getDurability() failed"; // Kontrollera att hållbarheten stämmer
 
-        // Test equipItem()
+        // Testa equipItem()
         System.out.println("Testing equipItem:");
-        armor.equipItem();
+        armor.equipItem(); // Utrusta rustningen
 
-        // Test unequipItem()
+        // Testa unequipItem()
         System.out.println("Testing unequipItem:");
-        armor.unequipItem();
+        armor.unequipItem(); // Ta av rustningen
 
-        // Test repair()
-        System.out.println("Before repair durability: " + armor.getDurability());
-        armor.repair(50);
-        System.out.println("After repair durability: " + armor.getDurability());
+        // Testa repair()
+        System.out.println("Before repair durability: " + armor.getDurability()); // Hämta och skriv ut hållbarheten innan reparation
+        armor.repair(50); // Repa rera rustningen med 50
+        System.out.println("After repair durability: " + armor.getDurability()); // Hämta och skriv ut hållbarheten efter reparation
     }
 }

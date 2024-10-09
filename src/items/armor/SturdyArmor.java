@@ -1,34 +1,39 @@
 package items.armor;
 
-import items.Armor; // Kontrollera att denna rad finns
+import items.Armor;
 
+// Definierar ett attribut för försvars värde
 public class SturdyArmor extends Armor {
-    private final int defenseValue; // Fast försvars värde
+// Definierar ett attribut för försvars värde
 
-    // Konstruktor
+    private final int defenseValue;
+
     public SturdyArmor(String name, int weight, double value, int defenseValue, int durability) {
-        super(name, weight, value, defenseValue, durability); // Passa parametrar till superklassen
-        this.defenseValue = defenseValue; // defenseValue sätts en gång
+        // Anropar superklassens (Armor) konstruktor för att sätta namn, vikt, värde, försvar och hållbarhet
+        super(name, weight, value, defenseValue, durability);
+        // Sätter det specifika försvars värdet för SturdyArmor
+        this.defenseValue = defenseValue;
     }
 
-    // Implementera getName()-metoden
+    // Implementerar getName()-metoden från superklassen Armor
     @Override
     public String getName() {
-        return super.getName(); // Returnera namnet från superklassen
+        return super.getName();
     }
 
-    // Överskriv getDamageDefense()-metoden
+    // Överskriver getDamageDefense()-metoden från superklassen Armor
     @Override
     public int getDamageDefense() {
-        return this.defenseValue; // Returnera det fasta försvars värdet
+        return this.defenseValue;
     }
 
-    // Implementera equipItem- och unequipItem-metoderna
+    // Implementerar equipItem()-metoden från Equippable-interfacet
     @Override
     public void equipItem() {
         System.out.println("Equipped: " + getName());
     }
 
+    // Implementerar unequipItem()-metoden från Equippable-interfacet
     @Override
     public void unequipItem() {
         System.out.println("Unequipped: " + getName());

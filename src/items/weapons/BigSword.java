@@ -1,39 +1,38 @@
 package items.weapons;
 
-import items.Weapon; // Se till att Weapon-klassen importeras
-import items.interfaces.MeleeWeapon; // Se till att MeleeWeapon-gränssnittet importeras
+import items.Weapon;
+import items.interfaces.MeleeWeapon;
 
 public class BigSword extends Weapon implements MeleeWeapon {
-    
-    // Konstruktor
+
     public BigSword(String name, int weight, double value, int damage, int attackSpeed) {
         super(name, weight, value, damage, attackSpeed);
     }
 
-    // Implementera equipItem från Weapon
+    // Implementerar metoden equipItem() från Equippable (genom Weapon-klassen)
     @Override
     public void equipItem() {
         System.out.println(getName() + " has been equipped.");
     }
 
-    // Implementera unequipItem från Weapon
+    // Implementerar metoden unequipItem() från Equippable (genom Weapon-klassen)
     @Override
     public void unequipItem() {
         System.out.println(getName() + " has been unequipped.");
     }
 
-    // Implementera meleeAttack från MeleeWeapon interface
+    // Implementerar meleeAttack() från MeleeWeapon-gränssnittet
     @Override
     public void meleeAttack() {
         System.out.println(getName() + " gör en vanlig närstridsattack med " + getDamage() + " i skada!");
     }
+    // En specifik metod för BigSword som utför en kraftfull svingattack
 
-    // Implementera bigSwingAttack, specifik metod för BigSword
     public void bigSwingAttack() {
         System.out.println(getName() + " utför en kraftfull svingattack! Skadar alla fiender i närheten.");
     }
+    // Beskrivningsmetod som berättar mer om svärdets egenskaper
 
-    // Valfritt: Lägg till en beskrivning av svärdet
     public void describe() {
         System.out.println("Detta är ett stort svärd som ger " + getDamage() + " skada och har en attackhastighet på " + getAttackSpeed() + ".");
     }

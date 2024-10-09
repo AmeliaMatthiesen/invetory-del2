@@ -1,9 +1,9 @@
 package items.interfaces;
 
-// Ensure the correct interface name and path
+// Definierar gränssnittet MeleeWeapon
 public interface MeleeWeapon {
 
-    // Interface methods
+    // Deklarerar en metod för att utföra en närstridsattack
     void meleeAttack();
 
 }

@@ -1,16 +1,18 @@
 package items;
 
-import items.interfaces.Equippable; // Adjust the package path as necessary
+import items.interfaces.Equippable;
 
 public abstract class Weapon extends InventoryItem implements Equippable {
 
+    // Privat attribut för att lagra skada orsakad av vapnet
     private int damage;
+    // Privat attribut för att lagra attackhastigheten för vapnet
     private int attackSpeed;
 
     public Weapon(String name, int weight, double value, int damage, int attackSpeed) {
-        super(name, weight, value); // Anropa superklassens konstruktor
-        this.damage = damage;
-        this.attackSpeed = attackSpeed;
+        super(name, weight, value);
+        this.damage = damage; // Sätter vapnets skada
+        this.attackSpeed = attackSpeed; // Sätter vapnets attackhastighet
     }
 
     public int getDamage() {
@@ -22,18 +24,18 @@ public abstract class Weapon extends InventoryItem implements Equippable {
     }
 
     public void setDamage(int damage) {
-        this.damage = damage;
+        this.damage = damage; // Uppdaterar skadan för vapnet
     }
-
 
     public void setAttackSpeed(int attackSpeed) {
-        this.attackSpeed = attackSpeed;
+        this.attackSpeed = attackSpeed; // Uppdaterar attackhastigheten för vapnet
     }
 
-    // Metoder från equippable interface
+    // Abstrakt metod för att utrusta vapnet, måste implementeras av subklasser
     @Override
     public abstract void equipItem();
 
+    // Abstrakt metod för att avväpna vapnet, måste implementeras av subklasser
     @Override
     public abstract void unequipItem();
 }
