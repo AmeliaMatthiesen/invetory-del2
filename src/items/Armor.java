@@ -2,12 +2,11 @@ package items;
 
 public abstract class Armor {
 
-    // Deklarerar privata attribut för rustningen
     private final String name;
     private final int weight;
     private final double value;
     private final int defenseValue;
-    private int durability; // Hållbarhet för rustningen (kan ändras)
+    private int durability;
 
     public Armor(String name, int weight, double value, int defenseValue, int durability) {
         this.name = name;
@@ -37,17 +36,13 @@ public abstract class Armor {
         return durability;
     }
 
-    // Metod för att reparera rustningen, ökar hållbarheten med det angivna beloppet
     public void repair(int amount) {
-        this.durability += amount;  // Lägger till repair-amount till rustningens hållbarhet
+        this.durability += amount;
     }
 
-    // Abstrakt metod som kräver att alla subklasser specificerar hur skadan försvaras
     public abstract int getDamageDefense();
 
-    // Abstrakt metod för att utrusta rustningen, måste implementeras i subklasser
     public abstract void equipItem();
 
-    // Abstrakt metod för att avväpna rustningen, måste implementeras i subklasser
     public abstract void unequipItem();
 }

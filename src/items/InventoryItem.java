@@ -36,7 +36,6 @@ public abstract class InventoryItem {
         this.value = value;
     }
 
-    // Metod för att visa grundläggande information om föremålet
     public void displayInfo() {
         System.out.println("Item: " + name + ", Weight: " + weight + ", Value: " + value + " gold");
     }

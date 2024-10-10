@@ -8,38 +8,32 @@ public class testWeapons {
 
     public static void main(String[] args) {
 
-        // Testa FastBow
-        System.out.println("Testar FastBow:"); // Skriver ut att FastBow testas
-        // Skapar en instans av FastBow med specifika parametrar
+        System.out.println("Testar FastBow:");
         FastBow fastBow = new FastBow("Rapid Fire Bow", 50, 2.5, 100, 10, 30.0);
-        System.out.println("Initial ammunition: " + fastBow.getAmmunition()); // Visar initial ammunition
-        fastBow.rangeAttack(); // Utför en distansattack
-        System.out.println("Ammunition efter attack: " + fastBow.getAmmunition()); // Visar ammunition efter attack
-        fastBow.equipItem(); // Utrusta bågen
-        fastBow.unequipItem(); // Ta bort utrustning
-        System.out.println(); // Skriver ut en tom rad för bättre läsbarhet
+        System.out.println("Initial ammunition: " + fastBow.getAmmunition());
+        fastBow.rangeAttack();
+        System.out.println("Ammunition efter attack: " + fastBow.getAmmunition());
+        fastBow.equipItem();
+        fastBow.unequipItem();
+        System.out.println();
 
-        // Testa BigSword
-        System.out.println("Testar BigSword:"); // Skriver ut att BigSword testas
-        // Skapar en instans av BigSword med specifika parametrar
+        System.out.println("Testar BigSword:");
         BigSword bigSword = new BigSword("Heavy Broadsword", 10, 500.0, 70, 5);
-        System.out.println("Svärdets skada: " + bigSword.getDamage()); // Visar svärdets skada
-        bigSword.meleeAttack(); // Utför en närstridsattack
-        bigSword.bigSwingAttack(); // Utför en stor svingattack
-        bigSword.equipItem(); // Utrusta svärdet
-        bigSword.unequipItem(); // Ta bort utrustning
-        System.out.println(); // Skriver ut en tom rad för bättre läsbarhet
+        System.out.println("Svärdets skada: " + bigSword.getDamage());
+        bigSword.meleeAttack();
+        bigSword.bigSwingAttack();
+        bigSword.equipItem();
+        bigSword.unequipItem();
+        System.out.println();
 
-        // Testa ThrowingKnife
-        System.out.println("Testar ThrowingKnife:"); // Skriver ut att ThrowingKnife testas
-        // Skapar en instans av ThrowingKnife med specifika parametrar
+        System.out.println("Testar ThrowingKnife:");
         ThrowingKnife knife = new ThrowingKnife("Stealth Knife", 25, 0.3, 80, 5, 10.0);
-        System.out.println("Initial ammunition: " + knife.getAmmunition()); // Visar initial ammunition
-        knife.rangeAttack(); // Utför en distansattack
-        System.out.println("Ammunition efter attack: " + knife.getAmmunition()); // Visar ammunition efter attack
-        knife.meleeAttack(); // Utför en närstridsattack
-        knife.slashAttack(); // Utför en slashing attack
-        knife.equipItem(); // Utrusta kniven
-        knife.unequipItem(); // Ta bort utrustning
+        System.out.println("Initial ammunition: " + knife.getAmmunition());
+        knife.rangeAttack();
+        System.out.println("Ammunition efter attack: " + knife.getAmmunition());
+        knife.meleeAttack();
+        knife.slashAttack();
+        knife.equipItem();
+        knife.unequipItem();
     }
 }

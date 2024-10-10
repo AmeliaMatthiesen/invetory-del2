@@ -1,36 +1,34 @@
-package items; 
+package items;
 
 public class Player {
-    private final String name; // Spelarens namn
-    private final Inventory inventory; // Spelarens inventarie
+
+    private final String name;
+    private final Inventory inventory;
 
     public Player(String name) {
-        this.name = name; // Sätt spelarens namn
-        this.inventory = new Inventory(); // Initiera inventariet
+        this.name = name;
+        this.inventory = new Inventory();
     }
 
     public String getName() {
-        return name; 
+        return name;
     }
 
     public Inventory getInventory() {
-        return inventory; 
+        return inventory;
     }
 
-    // Metod för att köpa ett föremål från en affär
     public void buyItem(InventoryItem item, Shop shop) {
-        shop.sellItem(item, this); // Anropa sälja-funktion i affären för att genomföra köpet
+        shop.sellItem(item, this);
     }
 
-    // Metod för att sälja ett föremål till en affär
     public void sellItem(InventoryItem item, Shop shop) {
-        inventory.removeItem(item); // Ta bort föremålet från spelarens inventarie
-        shop.addItem(item); // Lägg till föremålet i affären
+        inventory.removeItem(item);
+        shop.addItem(item);
     }
 
-    // Metod för att visa spelarens inventarie
     public void displayInventory() {
-        System.out.println(name + "'s Inventory:"); 
-        inventory.showItems(); // Visa innehållet i spelarens inventarie
+        System.out.println(name + "'s Inventory:");
+        inventory.showItems();
     }
 }
